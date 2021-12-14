@@ -68,6 +68,27 @@ valid dictionary entries merely because the features are not supported yet.
 * Generally improved error-handling, logging, output
     
 ## Change-Log
+### Version 2.0.8, 2021/12/14
+surfaceFeatures relating to a deleted patch in the main STL file will now be automatically removed from surfaceFeatureExtractDict
+internal cosmetic changes to the logging output
+
+### Version 2.0.7, 2021/12/10
+New feature: copy bounding box of a patch or refinement region and paste to other refinement region
+
+### Version: 2.0.6, 2021/12/01
+Error message instead of crash, when trying to open a recent case that was deleted/moved/renamed
+Internal fix: number of recent paths as specified in the settings is now used (was default value of 8)
+Abort export for surfaceFeatureExtractDict, if needed stl files are not present
+
+### Version: 2.0.5, 2021/11/25
+Replaced all output tabs with 4 spaces, also 4 spaces are filtered out when reading the files  
+blockMeshEstimator now shows sizes of levels 1, 2 and 3  
+New loading bar during reading/setup of the case indicates the application is working
+Fixed wrong processing of steps to run (castellatedMesh, snap, addLayers)
+
+### Version: 2.0.4, 2021/11/08
+Fixed wrong processing of "relativeSizes" entry in addLayers subdictionary
+
 ### Version: 2.0, 2021/11/02
 Original release with new Qt GUI, VTK renderer and overhauled core implementation.
 
