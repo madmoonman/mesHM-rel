@@ -68,6 +68,29 @@ valid dictionary entries merely because the features are not supported yet.
 * Generally improved error-handling, logging, output
     
 ## Change-Log
+### Version 2.0.11, 2022/02/08
+When browsing a new directory, the dialog will open up the father dir of the latest case instead of the case itself
+Check existence and try to create the mesHM_data folder if not present, was missing in this version
+Fixed crash when no comment indicators were present in definition line of refinement regions
+Fixed issue where in GUI deleted refinement regions with invalid input would stop update routine with nothing to do for the user
+but reloading and loosing his work of the session
+
+### Version 2.0.10, 2022/01/17
+Mitigated issues with surfaceFeatureExtractDict and features subdictionary in sHMD when there were deleted patches still present
+Order patches alphanumerically
+Min/Max surface refinement is now also changing the patch-specific setting in the UI
+LocationInMesh is now checked upon file update routine. Update is stopped, when location is outside
+More robust reading of refinement regions
+
+Minor adjustments:  
+Added a ton of logging
+tolerance spinbox now increments 0.1
+More descriptive tool tips in refinementRegions
+
+### Version 2.0.9, 2021/12/22
+Fixed a bug, when updating sHMD and sFED separately, newly created refinement regions would be created twice
+The browse dialog in the launcher now defaults to the latest used directory instead of installation dir
+
 ### Version 2.0.8, 2021/12/14
 surfaceFeatures relating to a deleted patch in the main STL file will now be automatically removed from surfaceFeatureExtractDict
 internal cosmetic changes to the logging output
