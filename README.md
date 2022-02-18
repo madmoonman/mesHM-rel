@@ -116,6 +116,7 @@ Fixed wrong processing of "relativeSizes" entry in addLayers subdictionary
 Original release with new Qt GUI, VTK renderer and overhauled core implementation.
 
 ## Getting Started
-1. Download zipped archive and extract to a location of your choice
-2. In your user directory, create a folder called 'mesHM_data'. On a Windows machine, it may look like C:\users\<yourname>\mesHM_data
-3. Launch the program using the executable
+1. Download whole versioned folder, preferably take out the "mesHM" folder and put it to wherever you prefer (no installation needed)
+2. Run the contained mesHM.exe in Windows
+	a) If it crashes right away: In your user directory, create a folder called 'mesHM_data'. On a Windows machine, it may look like C:\users\<yourname>\mesHM_data
+	b) Retry running the executable
