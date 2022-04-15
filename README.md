@@ -16,6 +16,11 @@ A Free GUI to Control OpenFOAM Mesher SnappyHexMesh
 * OF Foundation
 * ESI OpenFOAM v1812 or more recent
 
+## Impressions
+<img src="./pictures/ui_launcher_example.png" width="800"/>
+<img src="./pictures/ui_example_image.png" width="1000"/>
+
+
 ## Philosophy
 *mesHM* was build with the following intensions: unlike creating valid snappyHexMeshDicts from scratch - which is
 quite simple - this tool aims to not only write valid dictionaries, but also read and reuse them. Since all the
