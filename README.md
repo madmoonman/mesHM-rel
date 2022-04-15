@@ -17,8 +17,8 @@ A Free GUI to Control OpenFOAM Mesher SnappyHexMesh
 * ESI OpenFOAM v1812 or more recent
 
 ## Impressions
-<img src="/pictures/ui_launcher_example.png"/>
-<img src="/pictures/ui_example_image.png"/>
+<img src="pictures/ui_launcher_example.png"/>
+<img src="pictures/ui_example_image.png"/>
 
 
 ## Philosophy
