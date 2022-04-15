@@ -4,7 +4,7 @@ A Free GUI to Control OpenFOAM Mesher SnappyHexMesh
 
 **Author:** Michael Hiller
 
-**Version:** 2.0 (dev)
+**Version:** 2.1 (dev)
 
 **Software Versions**    
 
@@ -63,11 +63,44 @@ valid dictionary entries merely because the features are not supported yet.
 
 ## Planned Major Features and Improvements
 * On-demand JSON export
-* Further, fully supported refinement region types (spheres, cylinders)
+* STL refinement regions
 * Create valid blockMeshDict for 3b-approach
-* Generally improved error-handling, logging, output
-    
+
+## Known-Issues
+* The whole thing is still not too robust regarding formatting of the c++ dictionaries, if manual
+changes are needed, make sure to align with the format of the mesHM output
+
+
 ## Change-Log
+### Version 2.1.0, 2022/04/15  
+* Supports refinementRegions of type searchableSphere and searchableCylinder now
+* Highlights new patches to be added to the dictionary  
+
+### Version 2.0.14, 2022/04/08  
+* Fixed a bug in locationInMesh generator function
+
+### Version 2.0.13, 2022/04/03  
+Improved viewer controls (cosmetics and functionality):  
+* Icon for Fit View button
+* New button and icon to set the focal point and center of rotation
+* The view-along XYZ buttons now allow to invert the view on the second click
+* New button and icon to switch between surface and wireframe mode for the main stl file
+  
+Limited processing of refinement regions to type "searchableBox", as currently these are the only ones supported,
+avoiding crashes when using other types in the snappyHexMeshDict  
+The viewer now initializes with a 3d view (cosmetic change)  
+ToolTips for "Level to Split" and "Split in x/y/z" are now attached to the label, not to the input widget  
+Fixed Main Windows resizing itself after switching back to the launcher view  
+Entries inside the layers subdictionary are now allowed to have further parameters than "nSurfaceLayers",
+although they are not processed by mesHM yet.
+Removed output of commented out layers-definitions for the main stl, which hopefully avoids multiple entries
+for one and the same patch.
+
+### Version 2.0.12, 2022/03/23
+Added dialog to allow user bypass when locationInMesh seems to be invalid
+File -> Clone Case option added
+Some UI and handling improvements
+
 ### Version 2.0.11, 2022/02/08
 When browsing a new directory, the dialog will open up the father dir of the latest case instead of the case itself
 Check existence and try to create the mesHM_data folder if not present, was missing in this version
